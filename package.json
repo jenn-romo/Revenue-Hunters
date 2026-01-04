@@ -1,17 +1,21 @@
 {
   "name": "asr-product-strategy",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "node scripts/generate-blog-index.js && vite",
+    "build": "node scripts/generate-blog-index.js && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "front-matter": "^4.0.2",
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
