@@ -27,7 +27,7 @@ export async function getBlogPost(id: string): Promise<BlogPost | null> {
     if (!response.ok) return null;
     
     const text = await response.text();
-    const { attributes, body } = frontMatter<any>(text);
+    const { attributes, body } = frontMatter(text) as any;
     
     return {
       id,
